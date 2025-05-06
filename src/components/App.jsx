@@ -3,6 +3,7 @@ import React, { useState, useEffect } from "react";
 import Description from "./Description/Description";
 import Feedback from "./Feedback/Feedback";
 import Options from "./Options/Options";
+import Notification from "./Notification/Notification";
 
 const STORAGE_KEY = "feedbackData";
 
@@ -61,7 +62,7 @@ export default function App() {
           positive={positivePercent}
         />
       ) : (
-        <p>No feedback yet</p>
+        <Notification message="No feedback yet" />
       )}
     </>
   );
